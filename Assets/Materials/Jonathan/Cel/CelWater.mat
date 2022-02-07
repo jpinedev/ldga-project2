@@ -96,14 +96,13 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
     m_Floats:
     - ColorCountLimit: 2
     - Distortion_Amount: 0.4
-    - Foam_Anti_Aliasing: 0
-    - Foam_Distance: 0.4
+    - Foam_Anti_Aliasing: 0.05
+    - Foam_Distance: 0.13
     - Max_Depth: 6
-    - NoiseCutoff: 0.42
+    - NoiseCutoff: 0.7
     - Scroll_Speed: 0.04
     - _AlphaClip: 0
     - _Blend: 0
@@ -133,13 +132,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Deep_Color: {r: 0.4509804, g: 0.80719984, b: 0.85882354, a: 0.9019608}
+    - Deep_Color: {r: 0.5007565, g: 0.8302832, b: 0.8773585, a: 0.9098039}
     - Deep_Foam_Color: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     - Distortion_Map: {r: 0, g: 0, b: 0, a: 0}
-    - Distortion_Map_Tiling: {r: 20, g: 20, b: 0, a: 0}
+    - Distortion_Map_Tiling: {r: 80, g: 80, b: 0, a: 0}
     - Shallow_Color: {r: 0.6, g: 1, b: 0.8740446, a: 0.6666667}
-    - Shallow_Foam_Color: {r: 1, g: 1, b: 1, a: 1}
-    - Tiling: {r: 40, g: 40, b: 1, a: 1}
+    - Shallow_Foam_Color: {r: 1, g: 1, b: 1, a: 0.69411767}
+    - Tiling: {r: 80, g: 80, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
