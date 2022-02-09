@@ -10,6 +10,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float vertSpd;
     [SerializeField] float horizSpd;
 
+    Rigidbody rb1, rb2;
+
+    private void Start()
+    {
+        rb1 = p1.GetComponent<Rigidbody>();
+        rb2 = p2.GetComponent<Rigidbody>();
+    }
+
     private void Update()
     {
         float vert1 = Input.GetAxis("Vertical1") * Time.deltaTime;
@@ -22,5 +30,7 @@ public class PlayerController : MonoBehaviour
         p1.transform.Translate(camRight * horiz1 * horizSpd);
         p2.transform.Translate(camFwd * vert2 * vertSpd);
         p2.transform.Translate(camRight * horiz2 * horizSpd);
+        rb1.velocity = Vector3.Lerp(rb1.velocity, Vector3.zero, 0.25f);
+        rb2.velocity = Vector3.Lerp(rb2.velocity, Vector3.zero, 0.25f);
     }
 }

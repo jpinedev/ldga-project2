@@ -6,7 +6,8 @@ public class BridgePiece : MonoBehaviour
 {
     public bool isAttacked;
     public bool isBuilt;
-    public Material wood;
+
+    [SerializeField] private GameObject blockPlayer, sharkBiting;
 
     MeshRenderer mesh;
 
@@ -17,7 +18,8 @@ public class BridgePiece : MonoBehaviour
         isBuilt = false;
         mesh = gameObject.GetComponent<MeshRenderer>();
         mesh.enabled = false;
-        
+        blockPlayer.SetActive(true);
+        sharkBiting.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,36 +34,34 @@ public class BridgePiece : MonoBehaviour
             Destroy();
         }
 
-
-
-        
     }
 
     public void Build(){
 
         mesh.enabled = true;
         isBuilt = true;
+        blockPlayer.SetActive(false);
     }
 
     public void Attacked(){
 
         isAttacked = true;
-        mesh.material.color = Color.blue;
+        sharkBiting.SetActive(true);
     }
 
     void Defend(){
 
         isAttacked = false;
-        mesh.material = wood;
+        sharkBiting.SetActive(false);
     }
 
      void Destroy(){
 
         isAttacked = false;
         isBuilt = false;
-        mesh.material = wood;
         mesh.enabled = false;
-        
+        blockPlayer.SetActive(true);
+        sharkBiting.SetActive(false);
     }
 
 

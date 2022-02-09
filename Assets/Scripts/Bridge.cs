@@ -43,12 +43,12 @@ public class Bridge : MonoBehaviour
 
 
         if(Input.GetKeyDown(KeyCode.E)){
-        var rand = Random.Range(0, allChildren.Length - 1);
-        GameObject chosen = allChildren[rand];
+            var rand = Random.Range(0, allChildren.Length);
+            GameObject chosen = allChildren[rand];
 
-        var piece = chosen.GetComponent<BridgePiece>();
-        if(!piece.isAttacked && piece.isBuilt)
-        piece.Attacked();
+            var piece = chosen.GetComponent<BridgePiece>();
+            if(!piece.isAttacked && piece.isBuilt)
+                piece.Attacked();
         }
         
     }
